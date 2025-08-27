@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mini-jogo de Tênis — Clube de Tênis</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <div class="logo">T</div>
+      <div>
+        <div style="font-weight:800">Clube de Tênis — Jogo</div>
+        <div style="font-size:13px;color:var(--muted)">Paixão & Profissão</div>
+      </div>
+    </div>
+    <div class="access">
+      <button id="announceBtn" aria-label="Anunciar instruções">🔊 Instruções</button>
+      <button id="resetBtn">⟲ Reiniciar</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="card game-wrap" aria-labelledby="gameTitle">
+      <h1 id="gameTitle">Mini-jogo de Tênis</h1>
+      <p class="info">Use W/S ou ↑/↓ para mover o jogador. Empate até 7. Jogue contra a CPU — física simples, divertido e acessível.</p>
+
+      <canvas id="court" width="900" height="500" role="img" aria-label="Quadra de tênis com placar e bolinha"></canvas>
+
+      <div class="controls">
+        <button id="startBtn">▶ Jogar</button>
+        <label style="color:var(--muted);font-size:13px">Dificuldade:
+          <select id="difficulty" aria-label="Dificuldade do adversário">
+            <option value="0.9">Difícil</option>
+            <option value="0.7" selected>Médio</option>
+            <option value="0.5">Fácil</option>
+          </select>
+        </label>
+        <div style="color:var(--muted);font-size:13px;margin-left:12px">Teclas: W/S ou ↑/↓</div>
+      </div>
+
+      <div class="card" style="width:100%;margin-top:10px">
+        <strong>Fator principal:</strong>
+        <div style="margin-top:6px;color:var(--muted)">Disciplina e leitura de jogo. No tênis virtual e real, a paciência e a antecipação decidem pontos.</div>
+      </div>
+    </section>
+
+    <aside>
+      <div class="card">
+        <h2>Paixão pelo Tênis</h2>
+        <p class="info">O esporte conecta pessoas, constrói rotina e ensina resiliência. Aqui você treina reflexos e se diverte.</p>
+      </div>
+
+      <div class="card">
+        <h2>Informações atuais</h2>
+        <div id="updates" class="info">Atualizado: <span id="now"></span></div>
+      </div>
+
+      <div class="card">
+        <h2>Acessibilidade</h2>
+        <p class="info">O botão <strong>Instruções</strong> lê as regras. O jogo aceita teclado e é compatível com leitores de tela.</p>
+      </div>
+    </aside>
+    <!-- Botão de acessibilidade -->
+<button id="accessibilityBtn">Acessibilidade</button>
+
+<!-- Área onde aparecerão as instruções acessíveis -->
+<div id="instructions" aria-live="polite"></div>
+  </main>
+
+  <footer>© Clube de Tênis — Mini-jogo criado para treinar reflexos e celebrar a paixão pelo esporte.</footer>
+
+  <script src="game.js"></script>
+</body>
+</html>

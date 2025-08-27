@@ -1,0 +1,48 @@
+:root{
+  --google-blue:#4285F4; --google-red:#DB4437; --google-yellow:#F4B400; --google-green:#0F9D58;
+  --bg:#0b1220; --court:#0f1724; --line:#e6f0ff; --text:#ecf2ff; --muted:#a8b3c8;
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial, 'Helvetica Neue';
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;background:linear-gradient(180deg,#071022 0%, #0b1220 100%);color:var(--text)}
+header{display:flex;justify-content:space-between;align-items:center;padding:20px;max-width:1100px;margin:0 auto}
+.brand{display:flex;gap:12px;align-items:center}
+.logo{width:52px;height:52px;border-radius:10px;background:linear-gradient(135deg,var(--google-blue),var(--google-green));display:grid;place-items:center;font-weight:800;color:white}
+main{max-width:1100px;margin:18px auto;padding:0 18px;display:grid;grid-template-columns:1fr 340px;gap:18px}
+.card{background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.04);padding:14px;border-radius:12px}
+
+/* Game area */
+.game-wrap{display:flex;flex-direction:column;gap:12px;align-items:center}
+canvas{background:linear-gradient(180deg,#08304a,#04202e);border-radius:8px;box-shadow:0 10px 30px rgba(2,6,23,0.6)}
+.controls{display:flex;gap:8px;align-items:center}
+button{background:var(--google-blue);color:white;border:none;padding:10px 12px;border-radius:8px;font-weight:700;cursor:pointer}
+button:focus{outline:3px solid rgba(66,133,244,0.25)}
+
+aside{display:flex;flex-direction:column;gap:12px}
+h1{margin:0;font-size:20px}
+p{margin:6px 0;color:var(--muted)}
+
+.info{font-size:13px;color:var(--muted)}
+.access{display:flex;gap:8px;align-items:center}
+
+footer{max-width:1100px;margin:18px auto 60px;color:var(--muted);font-size:13px}
+
+@media(max-width:960px){
+  main{grid-template-columns:1fr}
+  canvas{width:100%}
+}
+
+/* Alto contraste */
+.high-contrast {
+  background-color: black !important;
+  color: yellow !important;
+}
+
+.high-contrast canvas {
+  border: 2px solid yellow;
+}
+
+/* Fonte maior */
+.large-font {
+  font-size: 1.3em;
+}
